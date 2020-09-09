@@ -1,0 +1,3 @@
+function meuAlerta(){
+    alert("alerta")
+}
