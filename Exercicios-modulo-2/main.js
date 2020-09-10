@@ -36,8 +36,10 @@ function getRandomColor() {
 }
 
 function exercicio2() {
-    var box = document.querySelector('.box');
-    box.style.backgroundColor = getRandomColor();
+    if (document.querySelector('.box') != null) {
+        var box = document.querySelector('.box');
+        box.style.backgroundColor = getRandomColor();
+    }
 }
 
 function adicionar() {
