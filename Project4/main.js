@@ -18,3 +18,9 @@ btn.onclick = () => {
     div.appendChild(br);
     div.appendChild(span);
 }
+
+function some(i,j){
+ return i + j;
+}
+
+btn.onclick = some;
