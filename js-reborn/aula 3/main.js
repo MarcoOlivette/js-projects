@@ -5,3 +5,7 @@ let varC = 'C'; // A
 const vet = [varA, varB, varC] = [varB, varC, varA]
 
 console.log(vet.map(i => console.log(i)))
+
+const nome = "Marco Aurelio Vieira Olivette";
+
+document.body.innerHTML = nome;
