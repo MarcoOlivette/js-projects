@@ -1,12 +1,45 @@
-let a = [1,2,3];
-let b = a;
+function meuEscopo() {
+    const form = document.querySelector('.form');
+    const pessoas = [];
+    function recebeEventoForm(evento) {
+        evento.preventDefault();
+        
+        const hrElement = document.createElement('hr');
 
-a[0] = 33;
+        const name = form.querySelector('.name');
+        const lastName = form.querySelector('.lastName');
+        const weight = form.querySelector('.weight');
+        const height = form.querySelector('.height');
+        const appElement = document.querySelector('#app');
 
-console.log(a,b);
+        const values = [
+            name.value
+            , lastName.value
+            , weight.value
+            , height.value
+        ]
 
-let c = [...a];
+        pessoas.push({
+            name: name.value,
+            lastName: lastName.value,
+            weight: weight.value,
+            height: height.value,
+        })
 
-a[2] = 'asdfasdf'
+        values.forEach(element => {
+            const spanElement = document.createElement('span');
+            const brElement = document.createElement('br');
+            const textNodeElement = document.createTextNode(element);
+            spanElement.appendChild(textNodeElement);
+            appElement.appendChild(brElement);
+            appElement.appendChild(spanElement);
+        });
+        
+        console.log(pessoas);
+        appElement.appendChild(hrElement);
+    }
 
-console.log(c,a,b)
+    form.addEventListener('submit', recebeEventoForm);
+}
+
+meuEscopo();
