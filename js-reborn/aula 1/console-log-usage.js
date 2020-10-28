@@ -36,3 +36,5 @@ people.forEach(element => {
  * d
  * fas
  */
+const teta = confirm('deseja pagar');
+console.log(teta)
