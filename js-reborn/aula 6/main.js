@@ -3,7 +3,7 @@ function meuEscopo() {
     const pessoas = [];
     function recebeEventoForm(evento) {
         evento.preventDefault();
-        
+
         const hrElement = document.createElement('hr');
 
         const name = form.querySelector('.name');
@@ -34,7 +34,7 @@ function meuEscopo() {
             appElement.appendChild(brElement);
             appElement.appendChild(spanElement);
         });
-        
+
         console.log(pessoas);
         appElement.appendChild(hrElement);
     }
