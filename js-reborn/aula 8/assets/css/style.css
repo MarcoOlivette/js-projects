@@ -56,3 +56,10 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 }
+.row{
+  text-align: center;
+}
+.col-2{
+  float: left;
+  width: 50%;
+}
