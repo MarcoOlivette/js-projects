@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-  max-width: 640px;
+  max-width: 750px;
   margin: 50px auto;
   background: #fff;
   padding: 20px;
@@ -62,4 +62,15 @@ form button:hover {
 .col-2{
   float: left;
   width: 50%;
+}
+
+.box{
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.result{
+  border-radius: 100px;
+  padding: 15px;
 }

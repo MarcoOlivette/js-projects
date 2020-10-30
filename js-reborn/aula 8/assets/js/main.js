@@ -1,9 +1,8 @@
 function main() {
     const buttonElement = document.querySelector('button');
-    const formElement = document.querySelector('form');
     buttonElement.addEventListener("click", (ev) => {
         ev.preventDefault()
-        const imcValues = takeValuesFromInput(formElement);
+        const imcValues = takeValuesFromInput(ev);
         const imcResult = calculateImc(imcValues);
         createImcWindowElement(imcResult);
     });
@@ -31,39 +30,39 @@ function calculateImc(imc) {
     values.imc = (imc.weight / (imc.height ** 2)).toFixed(2);
 
     if (values.imc < 18.5) {
-        values.type = "Abaixo do peso";
+        values.type = "abaixo do peso";
         values.backgroundColor = "#ff0000";
-        values.color = "black";
-    }
-
-    else if (values.imc >= 18.5 && values.imc <= 24.9) {
-        values.type = "Peso normal";
-        values.backgroundColor = "#25f505";
         values.color = "white";
     }
 
+    else if (values.imc >= 18.5 && values.imc <= 24.9) {
+        values.type = "com o peso normal";
+        values.backgroundColor = "#64ff4c";
+        values.color = "black";
+    }
+
     else if (values.imc >= 25 && values.imc <= 29.9) {
-        values.type = "Sobrepeso";
+        values.type = "com sobrepeso";
         values.backgroundColor = "#f58d05";
         values.color = "black";
     }
 
     else if (values.imc >= 30 && values.imc <= 34.9) {
-        values.type = "Obesidade grau 1";
+        values.type = "com obesidade grau 1";
         values.backgroundColor = "#f58d05";
         values.color = "black";
     }
 
     else if (values.imc >= 35 && values.imc <= 39.9) {
-        values.type = "Obesidade grau 2";
+        values.type = "com obesidade grau 2";
         values.backgroundColor = "#f56d05";
         values.color = "black";
     }
 
     else if (values.imc >= 40) {
-        values.type = "Obesidade grau 3";
+        values.type = "com obesidade grau 3";
         values.backgroundColor = "#ff0000";
-        values.color = "black";
+        values.color = "white";
     }
     return values;
 }
@@ -77,8 +76,6 @@ function createImcWindowElement(values){
     resultElement.style.backgroundColor = values.backgroundColor;
     resultElement.style.color = values.color;
     resultElement.appendChild(textNodeElement);
-    sectionElemente.appendChild(resultElement);
-    
 }
 
 main()
