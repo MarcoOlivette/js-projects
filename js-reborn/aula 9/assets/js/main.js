@@ -13,59 +13,23 @@ function modifyWindowToSetDate(dateElement, fullDate) {
 }
 
 function bringFullDay(day) {
-    console.log(day);
-    switch (day) {
-        case 0:
-            return "Domingo";
-        case 1:
-            return "Segunda-feira";
-        case 2:
-            return "Terça-feira";
-        case 3:
-            return "Quarta-feira";
-        case 4:
-            return "Quinta-feira";
-        case 5:
-            return "Sexta-feira";
-        case 6:
-            return "Sábado";
-        default:
-            return "";
-    }
+    const daysOfWeek = [
+        "Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"
+    ];
+
+    return daysOfWeek[day];
 }
 
 function bringFullMonth(month) {
-    switch (month) {
-        case 0:
-            return "janeiro";
-        case 1:
-            return "fevereiro";
-        case 2:
-            return "março";
-        case 3:
-            return "abril";
-        case 4:
-            return "maio";
-        case 5:
-            return "junho";
-        case 6:
-            return "julho";
-        case 7:
-            return "agosto";
-        case 8:
-            return "setembro";
-        case 9:
-            return "outubro";
-        case 10:
-            return "novembro";
-        case 11:
-            return "dezembro";
-        default:
-            return "";
-    }
+
+    const monthOfTheYear = [
+        "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+    ];
+
+    return monthOfTheYear[month];
 }
 
-function addZero(num) {
+function addZeroToLeft(num) {
     return num < 10 ? `0${num}` : `${num}`;
 }
 /**
@@ -85,8 +49,8 @@ function createDateInformation(date) {
     fullDate.day = date.getDate();
     fullDate.month = bringFullMonth(date.getMonth());
     fullDate.year = date.getFullYear();
-    fullDate.hour = addZero(date.getHours());
-    fullDate.minutes = addZero(date.getMinutes());
+    fullDate.hour = addZeroToLeft(date.getHours());
+    fullDate.minutes = addZeroToLeft(date.getMinutes());
 
     return fullDate;
 }
