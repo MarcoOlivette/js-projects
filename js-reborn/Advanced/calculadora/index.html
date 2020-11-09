@@ -1,48 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <div class="app">
         <h1>Calculadora</h1>
-        <input class="input" type="text" placeholder="0">
-        <div class="buttons">
-            <div class="line">
-                <button class="btn-clean">C</buttton>
-                <button class="btn-open-parentheses">(</button>
-                <button class="btn-close-parentheses">)</button>
-                <button class="btn-division">/</button>
-            </div>
-            <div class="line">
-                <button class="btn-7">7</button>
-                <button class="btn-8">8</button>
-                <button class="btn-9">9</button>
-                <button class="btn-multiply">*</button>
-            </div>
-            <div class="line">
-                <button class="btn-4">4</button>
-                <button class="btn-5">5</button>
-                <button class="btn-6">6</button>
-                <button class="btn-plus">+</button>
-            </div>
-            <div class="line">
-                <button class="btn-1">1</button>
-                <button class="btn-2">2</button>
-                <button class="btn-3">3</button>
-                <button class="btn-minus">-</button>
-            </div>
-            <div class="line">
-                <button class="btn-point">.</button>
-                <button class="btn-0">0</button>
-                <button class="btn-shift"><<</button>
-                <button class="btn-enter">=</button>
-            </div>
-        </div>
+        <table class="calculadora">
+            <tr>
+                <td colspan="4">
+                    <input class="input" type="text" placeholder="0">
+                </td>
+            </tr>
+            <tr class="line">
+                <td>
+                    <button class="btn btn-clean">C</buttton>
+                </td>
+                <td>
+                    <button class="btn btn-open-parentheses">(</button>
+                </td>
+                <td>
+                    <button class="btn btn-close-parentheses">)</button>
+                </td>
+                <td>
+                    <button class="btn btn-division">/</button>
+                </td>
+            </tr>
+            <tr class="line">
+                <td>
+                    <button class="btn btn-num">7</button>
+                </td>
+                <td>
+                    <button class="btn btn-num">8</button>
+                </td>
+                <td>
+                    <button class="btn btn-num">9</button>
+                </td>
+                <td>
+                    <button class="btn btn-multiply">*</button>
+                </td>
+            </tr>
+            <tr class="line">
+                <td>
+                    <button class="btn btn-num">4</button>
+                </td>
+                <td>
+                    <button class="btn btn-num">5</button>
+                </td>
+                <td>
+                    <button class="btn btn-num">6</button>
+                </td>
+                <td>
+                    <button class="btn btn-plus">+</button>
+                </td>
+            </tr>
+            <tr class="line">
+                <td>
+                    <button class="btn btn-num">1</button>
+                </td>
+                <td>
+                    <button class="btn btn-num">2</button>
+                </td>
+                <td>
+                    <button class="btn btn-num">3</button>
+                </td>
+                <td>
+                    <button class="btn btn-minus">-</button>
+                </td>
+            </tr>
+            <tr class="line">
+                <td>
+                    <button class="btn btn-point">.</button>
+                </td>
+                <td>
+                    <button class="btn btn-num">0</button>
+                </td>
+                <td>
+
+                    <button class="btn btn-shift">
+                        &laquo; </button>
+                </td>
+                <td>
+                    <button class="btn btn-enter">=</button>
+                </td>
+            </tr>
+        </table>
     </div>
     <script src="assets/js/index.js"></script>
 </body>
+
 </html>
