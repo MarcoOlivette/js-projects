@@ -1,7 +1,7 @@
 function criaCalculadora() {
     let inputElement = document.querySelector('.input');
 
-    const constructor = () => {
+    this.constructor = () => {
         click();
         press();
     }
@@ -61,8 +61,7 @@ function criaCalculadora() {
             alert('Erro no seu Calculo');
         }
     }
-
-    return constructor();
 }
 
-criaCalculadora();
+const teta =  new criaCalculadora();
+teta.constructor();
