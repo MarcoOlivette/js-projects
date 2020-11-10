@@ -44,6 +44,7 @@ function criaCalculadora() {
 
     const displayValues = (value) => {
         inputElement.value += value;
+        inputElement.focus();
     }
 
     const shiftDisplayValue = () => {
