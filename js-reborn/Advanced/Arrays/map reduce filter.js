@@ -15,6 +15,6 @@ console.log(resultado);
 const resultado2 = numeros
 .filter( valor => valor % 2 === 0)
 .map( valor => (valor *= 2))
-.reduce( (acumulador, valor) => (acumulador+= valor))
+.reduce( (acumulador, valor) => (acumulador + valor))
 
 console.log(resultado2);
