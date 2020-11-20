@@ -9,3 +9,12 @@ const resultado = numeros.filter( function (valor){
 });
 
 console.log(resultado);
+
+// Usando arrow
+
+const resultado2 = numeros
+.filter( valor => valor % 2 === 0)
+.map( valor => (valor *= 2))
+.reduce( (acumulador, valor) => (acumulador+= valor))
+
+console.log(resultado2);
