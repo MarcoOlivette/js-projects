@@ -1,32 +1,30 @@
 function Produto(nome, preco, estoque) {
   this.nome = nome;
   this.preco = preco;
-  this.estoque = estoque;
-
-  Object.defineProperty(this, "estoque", {
-    enumerable: true,
-    value: estoque,
-    writable: false,
-    configurable: true,
-  });
-
-  Object.defineProperty(this, "estoque", {
-    enumerable: false, // mostra a chave
-    value: estoque, // valor
-    writable: true, // pode altera
-    configurable: true, // configurável
-  });
-
-  Object.defineProperty(this, "estoque", {
-    enumerable: false, // mostra a chave
-    value: function () {
-      return estoque;
-    }, // valor
-    writable: true, // pode altera
-    configurable: true, // configurável
-  });
+	this.estoque = estoque;
+	
+	Object.defineProperties(this, {
+		nome : {
+			enumerable: true,
+			value: nome,
+			writable: true,
+			configurable: true,
+		},
+		preco : {
+			enumerable: true,
+			value: preco,
+			writable: true,
+			configurable: true,
+		},
+		estoque : {
+			enumerable: true,
+			value: estoque,
+			writable: true,
+			configurable: true,
+		}
+	});
 }
 
 const p1 = new Produto("produto", 20, 3);
 p1.estoque = 12313;
-console.log(p1, p1.estoque());
+console.log(p1);
